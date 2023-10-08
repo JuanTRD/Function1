@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stars</title>
+</head>
+<body>
+<label><input type="text" id="input"
+       oninput="nameOfStar(this.value)"
+       onchange="nameOfStar(this.value)"></label>
+<p id="result"></p>
+<script>
+    function nameOfStar(star) {
+        let starsName = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let stars = ['Ursa Minor', 'Taurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let b = starsName.indexOf(star);
+        if (b == -1) {
+            document.getElementById("result").innerHTML = 'Khong co chom sao nao';
+        } else {
+            document.getElementById("result").innerHTML = stars[b];
+        }
+    }
+</script>
+</body>
+</html>
